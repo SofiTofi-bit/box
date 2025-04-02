@@ -1,0 +1,414 @@
+/*логотип*/
+.parent{
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+.logo-holder{
+    display: flex;
+    justify-content: center;
+}
+body {background-color: #E0FFFF}
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    margin: auto;
+    width: 1200px;
+    padding: 10px;
+}
+/*меню*/
+.top-menu {
+  position: relative;
+  background: rgba(0, 0, 0.2);
+}
+.menu-main {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.menu-main:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.left-item {float: left;}
+.right-item {float: right;}
+.navbar-logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+.menu-main a {
+  text-decoration: none;
+  display: block;
+  line-height: 80px;
+  padding: 0 20px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-family: 'Arimo', sans-serif;
+  font-weight: bold;
+  color: white;
+  transition: .3s linear;
+}
+.menu-main a:hover {background: rgba(0,0,0,.3);}
+@media (max-width: 830px) {
+.menu-main {
+  padding-top: 90px;
+  text-align: center;
+}
+.navbar-logo {
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  transform: translateX(-50%);
+}
+.menu-main li {
+  float: none;
+  display: inline-block;
+}
+.menu-main a {
+  line-height: normal;
+  padding: 20px 15px;
+  font-size: 16px;
+}
+}
+@media (max-width: 630px) {
+.menu-main li {display: block;}
+}
+    /* меню*/
+yle>
+    * {box-sizing: border-box;}
+    body {font-family:  Verdana, sans-serif;}
+    .mySlide {display: none;}
+    img {vertical-align: middle;}
+/*банер*/
+.banner{
+    position: relative;
+text-align: center;
+    color: black;
+}
+.banner img{
+width:100%;
+display: block;
+}
+.banner-text{
+position: absolute;
+    top: 450px;
+    left:70px ;
+    right:70px ;
+    transform: translate( , );
+    color: #000000;
+    font-size: 30px;
+    font-style: 'Comic Sans MS', cursive, sans-serif ;
+    text-shadow: Tan 2px 2px 5px;
+}
+
+
+/*лучшие предложения*/
+.first-page{
+ width:100%;   
+}
+.first-page p{
+text-align: center;
+font-size: 50px;
+font-weight: bold;
+    color: #BC8F8F;
+}
+/*КОНТАКТЫ*/
+.contacts{
+width: 100%;
+}
+.contacts_block{
+width: 1050px;
+}
+.contacts_block p{
+text-align: center;
+margin-top: 10px;
+}
+.contacts_block_left{
+float: left;    
+}
+.contacts_block_left img{
+height: 200px;
+    width: auto;
+    border-radius: 100px;
+}
+.contacts_block_right{
+float: right;
+height: 211px;
+padding: 5px;  
+padding-top: 83px;
+font-size: 14px;
+}
+
+
+
+/*отели*/
+.models{
+ width:100%;   
+}
+.models-title{
+    
+}
+
+.models-menu{
+margin-top: 10px;
+text-align: center;
+}
+.models-menu ul{
+list-style: none;    
+}
+.models-menu ul li{
+display: inline-block;
+}
+.models-menu ul li a{
+margin-left: 20px;
+font-size: 20px;
+color: #000000;
+text-decoration: none;
+
+}
+.models-menu ul li a:hover{
+border-bottom: 2px solid #EDD716;
+cursor: pointer;
+font-weight: bold;
+}
+.models-list-menu{
+    
+}
+.models-block{
+    
+}
+.models-block-block{
+display: inline-block;
+width: 300px;
+height: auto;
+margin-right: 90px;
+}
+.models-block-block p{
+padding-bottom: 10px;
+}
+.models-block-block img{
+width: 300px;
+height: 200px;
+
+}
+.models-block-block a{
+padding-bottom: 10px;
+display: block;
+width:200px;
+height: auto;
+margin-bottom: 10px;
+}
+a.nav{
+background-color: #BC8F8F;
+color: #ffffff;
+text-align: center;
+padding-top: 10px;
+}
+a.nav:hover{
+background-color: #00FFFF;
+cursor: pointer;
+}
+
+
+.news{
+ width:100%;   
+}
+.news-block{
+border: 2px solid gray;
+display: inline-block;
+margin-right: 90px;
+font-size: 20px;
+width: 263px;
+padding: 15px;
+}
+/*низ*/
+.footer{
+  width:100%; 
+  background-color: #000000;
+  color: #ffffff;
+}
+.footer ul{
+display: inline-block;
+margin-right: 20px;
+margin-top: 0px;
+font-weight: bold;
+}
+.footer ul li{
+list-style: none;
+font-weight: normal;
+}
+.footer ul li a{
+color:#fff;
+text-decoration: none;
+display:block;
+padding-bottom: 2px;
+}
+.footer ul li a:visited{
+border-bottom: 2px solid #EDD716;
+
+}
+.footer ul li a:active{
+border-bottom: 2px solid #EDD716; 
+}
+.footer ul li a:hover{
+color:#ffffff;
+border-bottom: 2px solid #EDD716;
+padding-bottom: 2px;
+}
+
+.footer-form{
+background-color: black;
+display: none;
+color: #ffffff;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+opacity: 0.3;
+}
+.footer-form-close{
+border-radius: 10px;
+width: 50px;
+height: 50px;
+border: 2px solid #ffffff;
+text-align: center;
+padding-top: 25px;
+position: absolute;
+right: 20px;
+margin-top: 20px;
+cursor: pointer;
+}
+.footer-form-form{
+width: 300px;
+background: rgb(255,255,255);
+color: #000000;
+margin: auto;
+margin-top: 50px;
+}
+.footer-button{
+color: #ffffff;
+padding: 10px;
+background-color: #F4A460;
+font-weight: bold;
+font-size: 30px;
+border-radius: 50px; 
+
+}
+
+.soc-set{
+margin-top: 50px;
+}
+
+
+@media screen and (max-width:1000px){
+
+.container{
+ margin: auto;
+ width: 100%;
+ padding: 10px;
+}
+
+.menu-left{
+display: block;
+width: 300px;
+float: none;
+margin: auto;
+}
+.menu-right{
+display: block;
+width: 250px;
+float: none;
+margin: auto;
+}
+
+.second-page-block{
+width: 300px;
+height: auto;
+display: block;
+margin: auto;
+margin-bottom: 30px;
+}
+
+.menu-right ul li{
+display: block;
+}
+
+.models-block-block{
+display: block;
+width: 300px;
+height: auto;
+margin: auto;
+margin-bottom: 20px;
+}
+
+.news-block{
+display: block;
+font-size: 20px;
+margin: auto;
+margin-bottom: 10px;
+
+} 
+
+.contacts_block{
+margin: auto;
+width: 361px;
+}
+.contacts_block p{
+display: block;
+text-align: center;
+width: 356px;
+}
+.contacts_block_left{
+float: none;
+height: 50px;
+width: 170px;   
+}
+.contacts_block_left img{
+
+}
+.contacts_block_right{
+float: none;
+    width: 230px;
+    height: 75px;
+    padding-top: 221px;
+    text-align: center;
+    margin: auto;
+
+}
+
+
+.footer ul{
+width:300px;
+display: block;
+margin: auto;
+margin-bottom: 10px;
+}
+.footer-button{
+margin: auto;
+display: block;
+margin-top: 20px;
+cursor: pointer;
+}
+.soc-set a img {
+    height: 50px;
+    width: auto;
+    display: block;
+    margin: auto;
+    margin-bottom: 15px;
+}
+}
+
+
