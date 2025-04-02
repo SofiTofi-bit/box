@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Скаунт</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+  <!-- Шапка -->
+  <header class="header">
+    <div class="logos">
+      <img src="logo1.png" alt="Логотип 1" class="logo-item" loading="lazy">
+      <span class="x">×</span>
+      <img src="logo2.png" alt="Логотип 2" class="logo-item" loading="lazy">
+    </div>
+    <button class="contact-btn" onclick="document.getElementById('contactModal').style.display='block'">Связаться</button>
+  </header>
+
+  <!-- Главный контент -->
+  <main class="main-content">
+    <div class="qr-container">
+      <img src="qr.png" alt="QR-код" class="rotating-qr" loading="lazy">
+    </div>
+    <div class="phone-container">
+      <img src="phone.png" alt="Телефон" class="phone-image" loading="lazy">
+    </div>
+  </main>
+
+  <!-- Блоки -->
+  <section class="interactive-blocks">
+    <div class="block"><span class="icon">⚙️</span> О платформе</div>
+    <div class="block"><span class="icon">🌍</span> Региональная программа</div>
+    <div class="block"><span class="icon">🏢</span> Корпоративная программа</div>
+    <div class="block"><span class="icon">🤝</span> Стать партнером</div>
+    <div class="block"><span class="icon">📞</span> Контакты</div>
+  </section>
+
+  <!-- Футер -->
+  <footer class="footer">
+    <p>Контакты: example@mail.ru | +7 (999) 123-45-67</p>
+    <div class="download-links">
+      <a href="link-to-download1" class="download-button"><img src="apple-icon.png" alt="App Store" class="store-icon" loading="lazy"> iOS</a>
+      <a href="link-to-download2" class="download-button"><img src="google-play-icon.png" alt="Google Play" class="store-icon" loading="lazy"> Android</a>
+    </div>
+  </footer>
+
+  <!-- Модальное окно -->
+  <div class="modal" id="contactModal">
+    <div class="modal-content">
+      <span class="close" onclick="document.getElementById('contactModal').style.display='none'">×</span>
+      <h3>Связаться с нами</h3>
+      <form>
+        <input type="text" placeholder="Имя" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Сообщение" required></textarea>
+        <button type="submit">Отправить</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Кнопка "Наверх" -->
+  <button id="scrollTop" class="scroll-top">↑</button>
+
+  <!-- Скрипт -->
+  <script>
+    // Анимация QR-кода
+    gsap.to(".rotating-qr", {
+      rotation: 360,
+      duration: 10,
+      repeat: -1,
+      ease: "linear"
+    });
+
+    // Анимация телефона
+    gsap.from(".phone-image", {
+      x: 100,
+      opacity: 0,
+      duration: 1,
+      ease: "power2.out"
+    });
+
+    // Анимация логотипов в шапке
+    gsap.from(".logo-item", {
+      y: -20,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.2,
+      ease: "bounce.out"
+    });
+
+    // Интерактивность блоков
+    const blocks = document.querySelectorAll('.block');
+    blocks.forEach(block => {
+      block.addEventListener('click', () => {
+        blocks.forEach(b => b.classList.remove('active'));
+        block.classList.add('active');
+        alert(`Вы выбрали: ${block.textContent}`);
+      });
+    });
+
+    // Кнопка "Наверх"
+    const scrollTopBtn = document.getElementById('scrollTop');
+    window.addEventListener('scroll', () => {
+      scrollTopBtn.classList.toggle('visible', window.scrollY > 300);
+    });
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
